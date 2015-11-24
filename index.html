@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modules, Routes, and Controllers</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/myService.js"></script>      
+    <script src="js/ctrl1.js"></script>
+    <script src="js/ctrl2.js"></script>
+    <script src="js/herokuCtrl.js"></script>
+
+</head>
+<body ng-app="myModule">
+	<div>
+		<a href="#/setData">Set Data</a>
+		<a href="#/viewData">Display Data</a>
+		<ng-view></ng-view>
+	</div>
+	<div ng-controller="herokuCtrl">
+		<p> {{data}} </p>
+	</div>
+</body>
+</html>
